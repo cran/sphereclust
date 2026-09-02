@@ -1,6 +1,7 @@
 \name{Density of a mixture of elliptically symmetric distributions}
 \alias{dmixsespc}
 \alias{dmixesag}
+\alias{dmixkent}
 \title{
 Density of a mixture of elliptically symmetric distributions
 }
@@ -12,6 +13,7 @@ Density of a mixture of elliptically symmetric distributions.
 \usage{
 dmixsespc(y, probs, mu, theta, logden = FALSE)
 dmixesag(y, probs, mu, gam, logden = FALSE)
+dmixkent(y, probs, G, param, logden = FALSE)
 }
 
 \arguments{
@@ -29,6 +31,13 @@ A matrix with the \eqn{\theta} parameters of the SESPC distribution of each grou
 }
 \item{gam}{
 A matrix with the \eqn{\gamma} parameters of the ESAG distribution of each group.
+}
+\item{G}{
+For the Kent a list with the \eqn{\Gamma} matrix of each cluster.
+}
+\item{param}{
+For the Kent a matrix with the concentration parameters,
+the ovalness parameters and the \eqn{psi} angles.
 }
 \item{logden}{
 If you the logarithm of the density values set this to TRUE.

@@ -14,8 +14,8 @@ symmetric projected Cauchy (SESPC) or mixtures of elliptically symmetric angular
 \tabular{ll}{
 Package: \tab sphereclust\cr
 Type: \tab Package\cr
-Version: \tab 1.0 \cr
-Date: \tab 2026-05-28\cr
+Version: \tab 1.1 \cr
+Date: \tab 2026-09-02\cr
 License: \tab GPL-2\cr
 }
 }

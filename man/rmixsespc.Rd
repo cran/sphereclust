@@ -1,6 +1,7 @@
 \name{Simulation of random values from a mixture of elliptically symmetric distributions}
 \alias{rmixsespc}
 \alias{rmixesag}
+\alias{rmixkent}
 \title{
 Simulation of random values from a mixture of elliptically symmetric distributions
 }
@@ -12,6 +13,7 @@ The function simulates random values simulation from a given mixture of elliptic
 \usage{
 rmixsespc(n, probs, mu, theta)
 rmixesag(n, probs, mu, gam)
+rmixkent(n, probs, k, mu, b)
 }
 
 \arguments{
@@ -30,11 +32,17 @@ A matrix with the \eqn{\theta} parameters of the SESPC distribution of each grou
 \item{gam}{
 A matrix with the \eqn{\gamma} parameters of the ESAG distribution of each group.
 }
+\item{k}{
+A vector with the concetration parameters.
+}
+\item{b}{
+A vector with the ovalness parameters.
+}
 }
 
 \details{
-The function simulates random values simulation from a given mixture of SESPC
-or a mixture of ESAG distributions.
+The function simulates random values simulation from a given mixture of SESPC, ESAG
+or Kent distributions.
 }
 
 \value{

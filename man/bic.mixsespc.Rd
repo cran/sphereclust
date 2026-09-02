@@ -1,6 +1,7 @@
 \name{BIC and ICL for the model based clustering with elliptically symmetric distributions}
 \alias{bic.mixsespc}
 \alias{bic.mixesag}
+\alias{bic.mixkent}
 \title{
 BIC and ICL to choose the number of components in a model based clustering with elliptically symmetric distributions
 }
@@ -12,6 +13,7 @@ BIC and ICL to choose the number of components in a model based clustering with 
 \usage{
 bic.mixsespc(x, G = 5, tol = 1e-4, ncores = 1)
 bic.mixesag(x, G = 5, tol = 1e-4, ncores = 1)
+bic.mixkent(x, G = 5, tol = 1e-4, ncores = 1)
 }
 
 \arguments{
@@ -51,8 +53,11 @@ the second element is the system time and the third element is the elapsed time.
 \references{
 Perdikis T., Alharbi N. and Tsagris M. (2026). Model--based clustering for spherical
 and hyper--spherical data using elliptically symmetric distributions.
-
 https://arxiv.org/abs/2605.27496
+
+Peel D., Whiten W. J. and McLachlan, G. J. (2001). Fitting mixtures of Kent distributions
+to aid in joint set identification.
+Journal of the American Statistical Association, 96(453): 56--63.
 }
 
 \author{
@@ -72,7 +77,7 @@ Theodoros Perdikis \email{theoperdikis92@gmail.com}.
 }
 
 \examples{
-x <- as.matrix( iris[, 1:3] )
+x <- as.matrix( iris[1:100, 1:3] )
 x <- x / sqrt( rowSums(x^2) )
 bic.mixsespc(x, G = 3)
 }

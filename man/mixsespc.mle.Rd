@@ -1,6 +1,7 @@
 \name{Mixtures of elliptically symmetric distributions}
 \alias{mixsespc.mle}
 \alias{mixesag.mle}
+\alias{mixkent.mle}
 \title{
 Mixtures of elliptically symmetric distributions
 }
@@ -12,6 +13,7 @@ It performs model based clustering for spherical data assuming ellitpically syme
 \usage{
 mixsespc.mle(x, g = 2, tol = 1e-4)
 mixesag.mle(x, g = 2, tol = 1e-4)
+mixkent.mle(x, g = 2, tol = 1e-4)
 }
 
 \arguments{
@@ -34,7 +36,12 @@ of ESAG distributions. The initial step of the algorithm is based on a Gaussian 
 \value{
 A list including:
 \item{param}{
-A matrix with the mean direction, the concentration parameters and mixing probability of each group.
+For the mixsespc.mle() and mixesag.mle() a matrix with the mean direction, the concentration
+parameters and mixing probability of each group. For the mixkent.mle() a matrix with the mixing probabilities, the concentration parameters,
+the ovalness parameters and the \eqn{psi} angles.
+}
+\item{G}{
+For the mixkent.mle() a list with the \eqn{\Gamma} matrix of each cluster.
 }
 \item{loglik}{
 The value of the maximised log-likelihood.
@@ -56,8 +63,11 @@ The run time of the algorithm. A numeric vector. The first element is the user t
 \references{
 Perdikis T., Alharbi N. and Tsagris M. (2026). Model--based clustering for spherical
 and hyper--spherical data using elliptically symmetric distributions.
-
 https://arxiv.org/abs/2605.27496
+
+Peel D., Whiten W. J. and McLachlan, G. J. (2001). Fitting mixtures of Kent distributions
+to aid in joint set identification.
+Journal of the American Statistical Association, 96(453): 56--63.
 }
 
 \author{
