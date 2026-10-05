@@ -1,4 +1,4 @@
-df715b4c2a652f660db09d19fe947784 *DESCRIPTION
+a6e7d40d4e4a89ef0e90db1416badd71 *DESCRIPTION
 062984aa1e3906ae2e7b9d883cc4f620 *NAMESPACE
 a1765e91e591034c7d2c1a86056c2912 *R/bic.mixesag.R
 88e4da1b3949b45f5232db67877dd4f3 *R/bic.mixkent.R
@@ -10,7 +10,7 @@ f038b0dc0f4f80bbb8e08325bc72b76b *R/geodesic_pca_sphere.R
 4a1cd7f6ee7d6473f1c7de2e21c77d73 *R/mixesag.contour.R
 028f4a3a2688d1c93ec9d2e550e26de8 *R/mixesag.mle.R
 9c30915bc72205a2209a858d8b30c1a3 *R/mixkent.contour.R
-d78ebc9a3110a6c34cf3b36e206fe652 *R/mixkent.mle.R
+4dacb2f6471af2fce72b2f426a29c77e *R/mixkent.mle.R
 41b26dd8f292383749d137ee008ec186 *R/mixsespc.contour.R
 4afaa685b9981dfe4a04bbfadcb53b1c *R/mixsespc.mle.R
 e1b7b44647e5be66f0b394c2b7b5e45c *R/rmixesag.R
@@ -23,5 +23,5 @@ ac133981843daedbba18e5bfa6566d0e *man/dmixsespc.Rd
 5e7e5432df462bf27f5f4b347b422f80 *man/mixsespc.contour.Rd
 8ace999957e0f50d545d15a590ea7810 *man/mixsespc.mle.Rd
 d2956dcb74edd91ef706249805dea609 *man/rmixsespc.Rd
-3c404569a07e1c2ba0a3f5387ee9e09c *man/sphereclust-package.Rd
+8a1d70429042972ec83a4e20e7a40d06 *man/sphereclust-package.Rd
 90def1e3f2730bb7c40954f44b30ac16 *man/sphereplot.Rd

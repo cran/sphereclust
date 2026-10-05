@@ -48,10 +48,12 @@ mixkent.mle <- function(x, g = 2, tol = 1e-4) {
   }
 
   for ( j in 1:g ) {
+    suppressWarnings({
     mod <- Directional::kent.mle(x[cl == j, ])
+    })
     G[[ j ]] <- mod$G
     param[j, ] <- mod$param
-    lika[, j] <-  Directional::dkent(x, G[[ j ]], param[j, ])
+    lika[, j] <- Directional::dkent(x, G[[ j ]], param[j, ], logden = TRUE)
   }
 
   wlika <- exp(lika)
@@ -123,7 +125,9 @@ mixkent.mle <- function(x, g = 2, tol = 1e-4) {
 
   ini_kappa <- Rfast::vmf.mle(x)$kappa
   ini <- c(ini_kappa, ini_kappa / 2.1)
+  suppressWarnings({
   qa <- optim(ini, mle, control = list(maxit = 5000))
+  })
   para <- qa$par
   k <- para[1]   ;   b <- para[2]
   ckb <- Directional::kent.logcon(k, b)
